@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pola figur</title>
+    <link rel="stylesheet" href="arkusz.css">
+
+    
+</head>
+<body>
+    <nav><h2>Kalkulator</h2>
+        </nav>
+        
+        
+    
+        <div class="Kalkulator">
+            
+            <form name="forms" >
+                <h2>Pola Figur</h2>
+               <br> Podaj bok a: <input type="text" name="boka"><br>
+                <br>Podaj bok b: <input type="text" name="bokb"><br>
+                <br>Podaj bok h: <input type="text" name="bokh"><br>
+                <br>Podaj bok c: <input type="text" name="bokc"><br>
+            <button type="button" class="btn" onclick="pola(this.form)">Oblicz Pola i Obwody</button>
+            <br><br><br>
+            Pole kwadratu: <input class="pole" type="text" name="kwadrat" disabled><br><br>
+            Obwód kwadratu: <input class="obwod" type="tex" name="kwadratobw" disabled><br><br>
+            Pole prostokąta: <input class="pole" type="text" name="prostokat" disabled><br><br>
+            Obwód prostokąta: <input class="obwód" type="text" name="prostokatobw" disabled><br><br>
+            Pole równoległoboku: <input class="pole" type="text" name="rownoleglobok" disabled><br><br>
+            Obwód równoległoboku: <input class="pole" type="text" name="rownoleglobokobw" disabled><br><br>
+            Pole trojkąta: <input class="pole" type="text" name="trojkat" disabled><br><br>
+            Obwód trojkąta: <input class="pole" type="text" name="trojkatobw" disabled><br><br>
+            
+            
+            
+            
+            
+            </form>
+            
+            
+            <script type="text/javascript">
+                function pola(forms){
+                    if(forms.boka.value=="" || forms.bokb.value=="" || forms.bokh=="")
+                    {
+                        alert("Podaj Informacje")
+                    }
+                    else
+                    {
+                        boka=parseFloat(forms.boka.value)
+                        bokb=parseFloat(forms.bokb.value)
+                        bokh=parseFloat(forms.bokh.value)
+                        bokc=parseFloat(forms.bokc.value)
+                        forms.kwadrat.value=boka*2
+                        forms.prostokat.value=boka*bokb
+                        forms.trojkat.value=boka*bokh/2
+                        forms.rownoleglobok.value=boka*bokh
+                        forms.rownoleglobokobw.value=2*boka+2*bokb
+                        forms.kwadratobw.value=4*boka
+                        forms.prostokatobw.value=2*boka+2*bokb
+                        forms.trojkatobw.value=boka+bokb+bokc
+
+                    }
+                }
+                
+                
+                
+                
+                </script>
+                
+        </div>
+</body>
+</html>
